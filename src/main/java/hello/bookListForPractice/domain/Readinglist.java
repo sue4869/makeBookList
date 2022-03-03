@@ -1,4 +1,4 @@
-package hello.hellospring.domain;
+package hello.bookListForPractice.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User {
+public class Readinglist {
 
-    private int id;
-    private String username;
-    private String password;
+    private int readingID;
+    private int userID;
+    private int bookID;
 
 }

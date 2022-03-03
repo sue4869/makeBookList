@@ -1,18 +1,20 @@
-package hello.hellospring.domain;
+package hello.bookListForPractice.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Readinglist {
+public class Book {
 
-    private int readingID;
-    private int userID;
-    private int bookID;
+    private int bookid;
+    private String title;
+    private String writer;
+    private int price;
 
 }

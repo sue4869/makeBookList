@@ -11,7 +11,6 @@ $(".deleteButton").on("click",function (){
             deleteComplete : "deleteComplete"
         },
         success: function (data) {
-            console.log(data.deleteComplete);
             if(data.deleteComplete == true){
                 $('#dialog_alarmDelete').dialog({
                     modal: true,

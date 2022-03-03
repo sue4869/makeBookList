@@ -1,8 +1,7 @@
-package hello.hellospring.controller;
+package hello.bookListForPractice.controller;
 
-import hello.hellospring.domain.Book;
-import hello.hellospring.domain.Readinglist;
-import hello.hellospring.service.BookService;
+import hello.bookListForPractice.domain.Book;
+import hello.bookListForPractice.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,7 +35,6 @@ public class BaseController {
         boolean delete;
         Map<Object,Boolean> checkingDelete = new HashMap<>();
         delete = bookService.deleteBookFromList(bookId);
-        System.out.println(delete);
         checkingDelete.put("deleteComplete", delete);
 
         return checkingDelete;
@@ -57,7 +55,6 @@ public class BaseController {
         boolean delete;
         Map<Object,Boolean> checkingDelete = new HashMap<>();
         delete = bookService.deleteMyBook(bookId);
-        System.out.println(delete);
         checkingDelete.put("deleteComplete", delete);
 
         return checkingDelete;

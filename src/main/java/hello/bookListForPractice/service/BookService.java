@@ -1,10 +1,9 @@
-package hello.hellospring.service;
+package hello.bookListForPractice.service;
 
-import hello.hellospring.domain.Book;
-import hello.hellospring.domain.Readinglist;
-import hello.hellospring.mapper.BookMapper;
-import hello.hellospring.mapper.ReadingMapper;
-import lombok.extern.java.Log;
+import hello.bookListForPractice.domain.Book;
+import hello.bookListForPractice.domain.Readinglist;
+import hello.bookListForPractice.mapper.BookMapper;
+import hello.bookListForPractice.mapper.ReadingMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,10 +1,10 @@
-package hello.hellospring;
+package hello.bookListForPractice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HelloSpringApplicationTests {
+class runBookListTests {
 
 	@Test
 	void contextLoads() {

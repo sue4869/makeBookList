@@ -1,7 +1,6 @@
-package hello.hellospring.mapper;
+package hello.bookListForPractice.mapper;
 
-import hello.hellospring.domain.Book;
-import hello.hellospring.domain.Readinglist;
+import hello.bookListForPractice.domain.Readinglist;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
