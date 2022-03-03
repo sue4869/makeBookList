@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>내가 읽은 책 목록</title>
+
+</head>
+<body>
+<div id="main">
+    <div class = "pageTitle">
+        <h1 class = "title">나의 책 목록</h1>
+    </div>
+    <div class = "pageContents">
+        <ul class="booklist" th:each="mybook:${mybooklist}">
+            <oi>
+                <li class = "booktitle">
+                    <table>
+                        <tr>
+                            <td th:text="${mybook.getTitle()}"></td>
+                            <td><button class = "deleteButton" th:id = "deleteButton + ${mybook.getBookid()}">삭제</button></td>
+                        </tr>
+                    </table>
+                </li>
+            </oi>
+        </ul>
+    </div>
+    <a href = "/main"> 책 목록페이지로 가기</a>
+    <div id="dialog_alarmDelete" title="삭제 알림" style='display:none;'>
+        삭제되었습니다.
+    </div>
+</div>
+<script type="text/javascript" src="/js/myList.js"></script>
+</body>
+</html>

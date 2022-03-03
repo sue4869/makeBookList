@@ -1,0 +1,30 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11' // 자바 버전 기록
+
+repositories {
+	mavenCentral() //밑에 dependencies 다운 받는 곳 지정
+}
+
+dependencies { //
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'junit:junit:4.13.1'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.projectlombok:lombok:1.18.20'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//MyBatis 라이브러리 의존성 추가
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	runtimeOnly 'mysql:mysql-connector-java:8.0.25'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

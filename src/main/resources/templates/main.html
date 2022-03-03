@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <title>책 목록</title>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<div id="main">
+    <div class = "pageTitle">
+        <h1 class = "title">책 목록</h1>
+    </div>
+    <a href = "/myList">내가 읽은 책 목록으로 가기</a>
+    <div class = "pageContents">
+        <ul class="booklist" th:each="books : ${bookList}">
+            <oi>
+                <li class = "booktitle">
+                    <table>
+                        <tr>
+                            <td th:text="${books.getTitle()}"></td>
+                            <td><button class = "addButton"  th:id= "addButton+${books.getBookid()}">나의 책추가</button></td>
+                            <td><button class = "deleteButton" th:id = "deleteButton + ${books.getBookid()}">책 목록에서 삭제</button></td>
+                        </tr>
+                    </table>
+                </li>
+            </oi>
+        </ul>
+    </div>
+    <a href = "/addBookList"> 책 목록에 책 추가하기</a>
+    <div id="dialog_alarmDelete"  style='display:none;'>
+        삭제되었습니다.
+    </div>
+    <div id="dialog_alreadyGetIn" style='display:none;'>
+        이미 추가되어있습니다.
+    </div>
+    <div id="dialog_GetInComplete"  style='display:none;'>
+        읽은 책목록에 추가하였습니다.
+    </div>
+</div>
+<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>

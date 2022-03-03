@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>책 등록하기</title>
+</head>
+<body>
+<div class="enrollTitle"><span>책 등록하기 </span><br></div>
+<form action="/registerBook" method="post" id="registerForm">
+    <div class="contents">
+        <div class="bookTitle"><span class="spanForTitle">제목</span></div>
+        <input type="text" id="titleInput" placeholder="책 제목을 적어주세요" name="title">
+
+        <div class="writer"><span class="spanForwriter">작가</span><br></div>
+        <input type="text" id="writerInput" placeholder="작가를 적어주세요" name="writer">
+
+        <div class="price"><span class="spanForprice">가격</span><br></div>
+        <input type="text" id="priceInput" placeholder="책 가격을 적어주세요" name="price">
+
+        <div class="finshBtn"><button type="submit" class='finishBtn'>책 등록</button></div>
+    </div>
+    <a href = "/main"> 책 목록 페이지로 가기</a>
+</form>
+<script type="text/javascript" src="/js/addBookList.js"></script>
+</body>
+</html>
